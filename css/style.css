@@ -1,0 +1,535 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+/* --------------------------------------
+  1. GLOBAL STYLES
+-----------------------------------------*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+/*------ width < 75em ------*/
+@media only screen and (max-width: 75em) {
+    html {
+        font-size: 56.25%;
+    }
+}
+
+/*------ width < 61.94em ------*/
+@media only screen and (max-width: 61.94em) {
+    html {
+        font-size: 53.13%;
+    }
+}
+
+/*------ width < 48em ------*/
+@media only screen and (max-width: 48em) {
+    html {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    letter-spacing: .08rem;
+    font-weight: 400;
+}
+
+ul,
+ol {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    outline: none;
+    color: #353434;
+}
+
+button,
+button:hover,
+button:focus,
+button:active {
+    text-decoration: none;
+    outline: none;
+}
+
+.padding {
+    padding: 120px 0;
+    position: relative;
+}
+
+
+.title1 {
+    font-family: 'Bebas';
+    font-size: 100pt;
+    color: #4d4d4d;
+}
+
+.title2 {
+    font-family: 'Bebas';
+    font-size: 100pt;
+    color: #414f6b;
+}
+
+.title-chapter {
+    font-size: 70pt;
+    color:#697995;
+    font-family: 'Bebas';
+}
+
+.title-name {
+    font-size: 25pt;
+    color: #414f6b;
+    margin-left: -20px;
+    padding-right: 20px;
+    align-self: center;
+}
+
+/*------ width < 991px ------*/
+@media (max-width: 991px) {
+    .title-chapter {
+        font-size: 50pt;
+    }
+
+    .title-name {
+        font-size: 20pt;
+    }
+}
+
+.d-center {
+    align-self: center;
+}
+
+.d-inline-flex {
+    display: inline-flex;
+}
+
+.card-title {
+    color: #677793;
+    font-size: 30px;
+}
+
+.text-center {
+    align-items: center;
+}
+
+.text-left {
+    text-align: -webkit-left;
+}
+
+.p-l-1 {
+    padding-left: 10px;
+}
+
+.p-l-3 {
+    padding-left: 30px;
+}
+
+.p-r-3 {
+    padding-right: 30px;
+}
+
+.top-10 {
+    top: -100px;
+}
+
+.m-50 {
+    margin: 0 50px;
+}
+
+.margin-home {
+    margin-left: 70px;
+    margin-top: -70px;
+}
+
+/* --------------------------------------
+  2. NAVIGATION
+-----------------------------------------*/
+.navbar {
+    min-width: 80px;
+}
+
+.navbar-fix {
+    left: 0;
+    top: 0;
+    width: 100%;
+    border: 0;
+    background: none;
+    z-index: 999;
+    min-height: 50px;
+    transition: all 0.5s
+}
+
+.p-fix {
+    position: fixed;
+}
+
+.p-absolute {
+    position: absolute;
+}
+
+.box-shadow {
+    box-shadow: 0px 34px 150px 0px rgba(0, 0, 0, 0.5);
+}
+
+nav.scrollUp {
+    transform: translateY(-90px);
+}
+
+.navbar-brand .logo {
+    width: 40px;
+    height: 40px;
+    margin-left: 1rem;
+}
+
+.navbar-brand .mountain-logo {
+    width: auto;
+    height: 40px;
+    margin-left: 1rem;
+}
+
+
+.navbar .icon-bar {
+    color: #fff;
+    margin-right: 15px;
+}
+
+.navbar .icon-bar-dark {
+    color: #414f6b;
+    margin-right: 15px;
+}
+
+.navbar .navbar-nav .active {
+    color: rgb(255, 0, 102) !important;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.1);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+}
+
+.navbar-collapse .navbar-nav .nav-link {
+    text-align: center;
+    margin: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: underline;
+}
+
+.color-white {
+    color: white;
+}
+
+.color-black {
+    color: black;
+}
+
+/*---------------------------------------
+  3. HEADER                
+-----------------------------------------*/
+.home {
+    padding: 30rem 0;
+    background: linear-gradient(
+        rgb(0 123 255 / 10%), rgb(255 255 255 / 7%)
+      ), url("../img/photo-mountain.jpg") no-repeat center;
+    filter:alpha(opacity=40);
+    background-size: cover;
+    margin-bottom: 0;
+}
+
+/*------ width < 991px ------*/
+@media (max-width: 991px) {
+    .home {
+        padding: 23rem 0;
+    }
+}
+
+/*------ width < 991px ------*/
+@media (max-width: 991px) {
+    .home {
+        padding: 25rem 0;
+    }
+
+    .home-content {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .home-content h1 {
+        margin-top: 20px;
+        font-size: 9rem;
+    }
+
+}
+
+/*------ width < 480px ------*/
+@media (max-width: 480px) {
+    .home {
+        padding: 25rem 0;
+    }
+
+    .home-content {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .home-content h1 {
+        margin-top: 20px;
+        font-size: 5rem;
+    }
+
+    .margin-home {
+        margin: unset;
+    }
+}
+
+/* --------------------------------------
+  4. Histroy
+-----------------------------------------*/
+
+.history {
+    position: relative;
+    padding: 5rem 0 75rem;
+    background: linear-gradient(
+        rgb(0 123 255 / 9%), #28a74505
+      ), url("../img/peak.jpg") no-repeat center;
+    filter:alpha(opacity=40);
+    background-size: cover;
+    margin-bottom: 0;
+}
+
+.d-flex-md {
+    display: flex;
+}
+
+.climb {
+    padding-bottom: 20px;
+}
+
+/*------ width < 991px ------*/
+@media (max-width: 991px) {
+    .history {
+        padding: 5rem 0 75rem;
+    }
+
+    .d-flex-md {
+        display: unset;
+    }
+
+}
+
+/*------ width < 480px ------*/
+@media (max-width: 480px) {
+    .history {
+        padding: 5rem 0 55rem;
+    }
+}
+
+.carousel {
+    background-color: rgb(65 79 107 / 60%);
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.owl-carousel {
+    padding: 30px;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: white;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    background: #a7b1c3f0;
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity .2s ease;
+    border-radius: 30px;
+}
+
+/* --------------------------------------
+  5. Mountains
+-----------------------------------------*/
+.tabs{
+    background-color: #414f6b
+}
+
+.tabs .nav .nav-item .nav-link{
+    border: none;
+    color: #b0b4be;
+    font-size: 20px;
+}
+
+.tabs .nav-tabs{
+    border: none;
+}
+
+.tabs .nav-tabs .nav-item{
+    border: none;
+}
+
+.tabs .nav .nav-item .active{
+    background-color:#b0b4be;
+    color: #414f6b;
+}
+
+.mountains {
+    width: 100%;
+}
+
+#menu1 {
+    background: linear-gradient(
+        rgb(0 123 255 / 4%), 
+        #ffb30700
+      ), url("../img/photo-mountain1.jpg") no-repeat center;
+    filter:alpha(opacity=40);
+    padding: 10rem 0 40rem;
+    background-size: cover;
+    margin-bottom: 0;
+}
+
+#menu2 {
+    background: linear-gradient(
+        rgb(0 123 255 / 4%), 
+        #ffb30700
+      ), url("../img/photo-mountain2.jpg") no-repeat center;
+    filter:alpha(opacity=40);
+    padding: 10rem 0 40rem;
+    background-size: cover;
+    margin-bottom: 0;
+}
+
+/*------ width < 480px ------*/
+@media (max-width: 480px) {
+    #menu1 {
+        padding: 10rem 0 30rem;
+    }
+    #menu2 {
+        padding: 10rem 0 30rem;
+    }
+}
+
+.card {
+    /* width: 400px; */
+    /* left: 10px; */
+    /* top: -200px; */
+    background-color: #f8f9fab0;
+}
+
+.col-5 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 42%;
+    flex: 0 0 42%;
+    max-width: 42%;
+}
+
+.col-7 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 58%;
+    flex: 0 0 58%;
+    max-width: 58%;
+}
+
+@media (min-width: 992px){
+    .col-lg-5 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 42%;
+        flex: 0 0 42%;
+        max-width: 42%;
+    }
+}
+
+/*---------------------------------------
+  6.FOOTER
+  ---------------------------------------*/
+.footer {
+    padding: 0px 0;
+    background: #414f6b;
+    color: #63769d;
+}
+
+.footer .logo {
+    width: 40px;
+    height: 40px;
+    margin-left: 1rem;
+}
+
+.footer .mountain-logo {
+    width: auto;
+    height: 40px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.footer .copyright {
+    align-self: center;
+    padding: 10px 0;
+}
+
+.footer .copyright_text {
+    text-align: right;
+}
+
+.footer .align-left {
+    text-align: left;
+}
+
+/*------ width < 991px ------*/
+@media (max-width: 991px) {
+    .footer {
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .footer .copyright_text {
+        text-align-last: center;
+    }
+
+}
+
+/*------ width < 750px ------*/
+@media (max-width: 750px) {
+    .mr-auto {
+        margin-right: unset !important;
+    }
+
+    .footer .align-left {
+        text-align: unset;
+    }
+}
